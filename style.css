@@ -1,3 +1,30 @@
+:root {
+  --primary: #6200ea;
+  --secondary: #03dac6;
+  --background: #f3f4f6;
+  --text: #1f2937;
+  --light: #ffffff;
+  --accent: #ffd700;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+/* ====== Global Reset ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* ====== Header Section ====== */
 header {
   background: linear-gradient(120deg, var(--primary), var(--secondary));
   color: var(--light);
@@ -37,7 +64,7 @@ header {
 
 .header-text p {
   font-size: 1.1rem;
-  margin: 0.3rem 0 0;
+  margin-top: 0.3rem;
 }
 
 .resume-button {
@@ -59,7 +86,112 @@ header {
   transform: scale(1.05);
 }
 
-/* Optional: Responsive behavior for smaller screens */
+/* ====== Navigation ====== */
+nav .nav-center {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+nav a {
+  color: var(--primary);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ====== Sections ====== */
+section {
+  padding: 2.5rem 5%;
+  background-color: var(--light);
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 1s ease-in;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--secondary);
+  padding-left: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: var(--text);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ====== Links ====== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary);
+  color: var(--light);
+  margin-top: 3rem;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Responsive Layout ====== */
 @media (max-width: 768px) {
   .header-wrapper {
     flex-direction: column;
