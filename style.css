@@ -234,52 +234,55 @@ nav {
 }
 
 #skills {
-  padding: 2rem 0;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .skill-group {
-  margin-bottom: 2rem;
-  background-color: var(--light);
-  border-left: 5px solid var(--primary);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;
+  margin-bottom: 2.5rem;
 }
 
 .skill-group h3 {
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
-  color: var(--primary, #0369a1); /* Fallback color if --primary is not defined */
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary, #0f172a);
+  border-left: 4px solid #0369a1;
+  padding-left: 0.75rem;
+  background: linear-gradient(90deg, #e0f2fe 0%, transparent 100%);
+  display: inline-block;
 }
 
 .skill-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  padding: 0; /* Optional: removes default padding if inside a list */
-  margin: 0;  /* Optional: resets any default margin */
-  list-style: none; /* In case it's a <ul> or <ol> */
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .badge {
   display: inline-block;
-  background-color: #e0f2fe;
+  background: linear-gradient(145deg, #e0f2fe, #bae6fd);
   color: #0369a1;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   border-radius: 999px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: default; /* Makes it clear it's not clickable unless intended */
-  user-select: none; /* Prevents accidental text selection */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: default;
+  user-select: none;
+  position: relative;
 }
 
 .badge:hover {
-  background-color: #bae6fd;
-  transform: scale(1.05);
+  background: linear-gradient(145deg, #dbeafe, #a5f3fc);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 
