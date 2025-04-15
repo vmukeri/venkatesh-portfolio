@@ -170,4 +170,68 @@ nav {
     padding: 0.5rem;
   }
 }
+#Certifications {
+  padding: 2rem 0;
+}
+
+.cert-card {
+  background-color: var(--light);
+  border: 1px solid #e5e7eb;
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+}
+
+.cert-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.cert-tags {
+  margin-bottom: 0.8rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: var(--primary);
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.issued {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.badge.expires {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+
+
 
